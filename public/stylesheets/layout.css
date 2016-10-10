@@ -1,0 +1,218 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, br, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:focus, input:focus{
+    outline: none;
+}
+
+body{
+    /*background: url('../images/bg_0.jpg');*/
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+*::selection{
+    background-color:rgb(50, 200, 200);
+    color: #ccc;
+}
+
+*::-moz-selection{
+    background-color:rgb(50, 200, 200);
+    color: #eee;
+}
+
+
+/* 主页面样式 */
+.main{
+    /*max-width: 720px;*/
+    margin:auto;
+    box-shadow: 0 5px 10px #ccc;
+    position: relative;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 0 40px;
+    z-index: 2;
+}
+
+/* 导航区域 */
+header{
+    background: white;
+    padding-top: 20px;
+}
+
+header>div.pic{
+    width:140px;
+    height: 140px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: rgba(60, 71, 62, 0.37);
+}
+
+header>div.pic>img{
+    width:140px;
+    height: 120px;
+}
+
+header div.subtitle{
+    margin-top: 30px;
+    text-align: center;
+}
+
+header{
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 15px;
+}
+
+nav{
+    margin-top: 40px;
+    display: block;
+    width: 100%;
+}
+
+nav ul{
+    max-width: 260px;
+    list-style: none;
+    margin:0 auto;
+}
+
+nav ul li{
+    display: inline-block;
+    width:80px;
+    text-align: center;
+}
+
+nav ul li a{
+    color: #7d7d7d;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+/* 内容区域 */
+article{
+    margin: 50px 0;
+    clear: both;
+    min-height: 440px;
+}
+
+article .article-item{
+    margin-top: 60px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.article-item h1{
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.article-item h1 a{
+    color:rgb(219, 153, 83);
+    text-decoration:none;
+}
+
+.article-item h1 a:hover{
+    color:rgb(247, 127, 0);
+}
+
+.article-item .title{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.article-item .content{
+    padding-left: 20px;
+}
+
+.article-item .article-time{
+    margin-top: 20px;
+    color:#bbb;
+}
+
+.article-item .article-time .left{
+    float:left;
+}
+
+.article-item .article-time .right{
+    float:right;
+    padding-right: 15px;
+}
+
+.clear{
+    clear: both;
+}
+
+.content img{
+    max-width:100%;
+}
+
+div.item{
+    height: 30px;
+    line-height: 30px;
+}
+
+div.item.list a{
+    color: #ccc;
+}
+
+div.item.list a:hover{
+    color: black;
+}
+
+.article-item .content{
+    max-height: 390px;
+    overflow: hidden;
+}
+
+/* 页脚 */
+footer{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.go-top{
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    display: none;
+    z-index: 3;
+}
+
+.go-top img{
+    width: 60px;
+    cursor: pointer;
+}
+
+div.left, div.right{
+    color: #bbb;
+}
+
+div.left{
+    float:left;
+}
+
+div.right{
+    float:right;
+}
+
+img{
+    max-width: 100% !important;
+}
+
+.hide{
+    display:none;
+}

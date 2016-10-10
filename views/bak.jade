@@ -1,0 +1,15 @@
+script(src="/javascripts/js/index.js")
+h1= title
+p Welcome to #{title}
+#container
+    span 这里是一个测试页面，点击下面的发送按钮发送一个测试ajax请求
+    input(type="button", onclick="send();", value="Send")
+div
+    textarea(id="result")
+h3 投票系统
+ul(id="subject")
+    - var data = [{value: 1, key: '上'}, {value: 2, key: '北'}, {value: 3, key: '下'}, {value: 4, key: '南'}];
+    - for (var i = 0; i < data.length; i++)
+        li(data-val=data[i].value)
+            input(type="radio", name="push")
+            span= data[i].key

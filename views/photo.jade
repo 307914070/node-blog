@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    script(src="/javascripts/js/index.js")
+    h1= title
+    p Welcome to #{title}
+        input(type='button',onclick="getUser()",value="发送")
+        
+    div.article
+        div
+            span 标题
+            input#artTitle
+        div
+            span=内容
+            textarea#artContent
+        div
+            input#subBtn(type='button', value='确认添加',onclick='addArticle()')
+            
+    div.article
+        input(type='button', value='获取文章信息', onclick='getArticle()')
+        br
+        div#result

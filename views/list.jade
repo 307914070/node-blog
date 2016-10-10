@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    - for (var i = 0; i < datas.length; i++)
+        div.item
+            div.left.list
+                a(href="/article?id="+datas[i].id)= datas[i].title
+            div.right.list
+                span= datas[i].time
+            div.clear

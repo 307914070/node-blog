@@ -1,0 +1,33 @@
+
+extends layout
+
+block style
+    link(href="/javascripts/libs/bower_components/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
+    link(href="/javascripts/libs/bower_components/font-awesome-4.2.0/css/font-awesome.css", rel="stylesheet")
+    link(href="/javascripts/libs/bower_components/ckeditor/sample.css", rel="stylesheet")
+    link(href="/stylesheets/article.css", rel="stylesheet")
+block scripts
+    script(src='/javascripts/libs/bower_components/bootstrap/dist/js/bootstrap.js')
+    script(src='/javascripts/libs/bower_components/ckeditor/ckeditor.js')
+    script(src='/javascripts/libs/bower_components/ckeditor/samples/js/sample.js')
+    script(src='/javascripts/js/add.js')
+block content
+    div.form-group
+        div.form-inline
+            label.control-label.text-left 标题:&nbsp;&nbsp;
+            input.form-control#title
+    div.form-group
+        div#editor
+    div.form-group
+        div.form-inline
+            label.control-label 分类:&nbsp;&nbsp;
+            input.form-control#catogray
+    div.hide
+        span 阅读数
+        span 赞
+    div.form-group
+        div.form-inline
+            a.btn.btn-success(onclick="addArticle()") 提交
+
+    script.
+        initSample();

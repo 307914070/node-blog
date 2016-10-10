@@ -1,0 +1,33 @@
+extends layout
+
+block style
+    link(href="/stylesheets/article.css", rel="stylesheet")
+
+block content
+    - for (var i = 0; i < datas.length; i++)
+        h1.title= datas[i].title
+        section!= datas[i].content
+        div.article-foot
+            div.left
+                发布时间：
+                span= datas[i].time
+            div.right
+                分类：
+                span= datas[i].catogary
+
+    //多说评论框 start
+    //<div class="ds-thread" data-thread-key="请将此处替换成文章在你的站点中的ID" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+    //<div class="ds-thread" data-thread-key="32" data-title=title data-url="http://xuyuan.coding.io"></div>
+    //多说评论框 end
+    //多说公共JS代码 start (一个网页只需插入一次)
+    //script.
+        //var duoshuoQuery = {short_name:"xuyuan668"};
+            //(function() {
+                //var ds = document.createElement('script');
+                //ds.type = 'text/javascript';ds.async = true;
+                //ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                //ds.charset = 'UTF-8';
+                //(document.getElementsByTagName('head')[0]
+                //|| document.getElementsByTagName('body')[0]).appendChild(ds);
+            //})();
+    //多说公共JS代码 end
