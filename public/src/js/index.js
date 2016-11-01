@@ -43,6 +43,32 @@ function getArticle() {
     });
 }
 
+function bindEvent() {
+    $('#btnTest').bind('click', function () {
+        $.ajax({
+            url: '/test',
+            success: function (data) {
+                new Vue({
+                    el: '#app',
+                    data: {
+                        message: data
+                    }
+                });
+            }
+        });
+    });
+
+    $('#btnTest2').bind('click', function () {
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'welcome to vue.'
+            }
+        });
+    });
+}
+
 $(function () {
     //getArticle();//获取文章列表
+    bindEvent();
 });
