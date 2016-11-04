@@ -23,7 +23,7 @@ router.get('/test', function (req, res) {
 });
 
 //获取文章
-router.get('/getArticle', function (req, res) {
+router.get('/getArticleList', function (req, res) {
     var collection = db.get('article');//获得文章集合
     console.log('开始查找...');//输出log
     //var userName = req.param('data');

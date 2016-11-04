@@ -20,11 +20,8 @@ function getUser() {
 
 //添加文章
 function addArticle() {
-    var title = document.getElementById('artTitle');
-    var content = document.getElementById('artContent');
     $.ajax({
-        url: '/photo/addArticle',
-        data: {data: {title: title.value, content: content.value}},
+        url: '/getArticleList',
         success: function (data) {
             console.log(data);
         }
@@ -65,6 +62,17 @@ function bindEvent() {
                 message: 'welcome to vue.'
             }
         });
+    });
+
+    $('#btnGetArticleList').bind('click', function () {
+        addArticle();
+    });
+
+    new Vue({
+        el: '#apps',
+        data: {
+            message: 'Hello Vue.js!'
+        }
     });
 }
 
