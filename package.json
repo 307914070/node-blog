@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "postinstall": "npm install"
   },
   "author": {
     "name": "sae",
@@ -23,6 +24,6 @@
     "serve-favicon": "~2.2.0"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": "0.10.36"
   }
 }
