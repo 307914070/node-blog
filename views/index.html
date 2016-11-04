@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="./src/libs/jquery.js"></script>
+    <script type="text/javascript" src="./src/js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button type="button" value="点我一下" id="btnTest">点我一下</button>
+        <button type="button" value="点我一下" id="btnTest2">加载vue数据</button>
+        <div class="" id="app">{{message}}<div>
+        <div id="apps">
+            <span >{{message}}</span>
+            <input  type="text" name="name" value="" v-model="message" />
+        </div>
+        <button type="button" name="button" id="btnGetArticleList">获取文章列表</button>
+    </div>
+</body>
+</html>
