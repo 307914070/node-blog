@@ -5,19 +5,19 @@ var logger = require('morgan');
 //var config = require('./config.js');
 
 //路由后端控制器
-var index = require('./routes/index'); //首页
-var article = require('./routes/article'); //文章
-var photo = require('./routes/photo'); //相册
-var about = require('./routes/about'); //关于
-var add = require('./routes/addArticle'); //添加文章
-var list = require('./routes/list'); //文章列表
+var index = require('./server/modules/index/index'); //首页
+var article = require('./server/modules/article/article'); //文章
+var photo = require('./server/photo'); //相册
+var about = require('./server/modules/about/about'); //关于
+var add = require('./server/addArticle'); //添加文章
+var list = require('./server/modules/article/list'); //文章列表
 
 var app = express();
 app.use(express.static('public'));//指定public目录
 
 
 app.get('/', function(req, res) {
-    res.sendfile('./views/index.html');
+    res.sendfile('./views/test.html');
 });
 
 //路由前端渲染页面
