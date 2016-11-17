@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
+var config = require('./server/common/config');
 //var config = require('./config.js');
 
 //路由后端控制器
@@ -15,9 +16,10 @@ var list = require('./server/modules/article/list'); //文章列表
 var app = express();
 app.use(express.static('public'));//指定public目录
 
+var indexUrl = config.isTest ? './views/test.html' : './views/index.html';
 
 app.get('/', function(req, res) {
-    res.sendfile('./views/test.html');
+    res.sendfile(indexUrl);
 });
 
 //路由前端渲染页面
