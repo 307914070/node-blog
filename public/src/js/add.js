@@ -1,7 +1,7 @@
 function addArticle() {
     var param = {
         "title": $('#title').val(),
-        "content": CKEDITOR.instances.editor.getData(),
+        "content": CKEDITOR.instances.ck1.getData(),
         "catogary": $('#catogray').val()
     };
 
@@ -9,8 +9,12 @@ function addArticle() {
         method: 'post',
         url: '/add/article',
         data: param,
-        success: function (data) {
+        success: function(data) {
             alert(data.data);
         }
     });
 }
+
+$(document).ready(function() {
+    CKEDITOR.replace('ck1');
+});

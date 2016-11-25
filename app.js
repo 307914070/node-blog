@@ -14,9 +14,9 @@ var add = require('./server/addArticle'); //添加文章
 var list = require('./server/modules/article/list'); //文章列表
 
 var app = express();
-app.use(express.static('public'));//指定public目录
+app.use(express.static('public')); //指定public目录
 
-var indexUrl = config.isTest ? './views/test.html' : './views/index.html';
+var indexUrl = config.isTest ? config.testPage : config.indexPage;
 
 app.get('/', function(req, res) {
     res.sendfile(indexUrl);
