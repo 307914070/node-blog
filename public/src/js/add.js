@@ -7,7 +7,7 @@ function addArticle() {
 
     $.ajax({
         method: 'post',
-        url: '/add/article',
+        url: '/article/add',
         data: param,
         success: function(data) {
             alert(data.data);

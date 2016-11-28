@@ -3,6 +3,10 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var config = require('./server/common/config');
+var app = express();
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
 //var config = require('./config.js');
 
 //路由后端控制器
@@ -13,7 +17,6 @@ var about = require('./server/modules/about/about'); //关于
 var add = require('./server/addArticle'); //添加文章
 var list = require('./server/modules/article/list'); //文章列表
 
-var app = express();
 app.use(express.static('public')); //指定public目录
 
 var indexUrl = config.isTest ? config.testPage : config.indexPage;
@@ -24,7 +27,7 @@ app.get('/', function(req, res) {
 
 //路由前端渲染页面
 app.use('/', index); //首页
-// app.use('/article', article); //文章详细
+app.use('/article', article); //文章详细
 // app.use('/photo', photo); //相册
 // app.use('/about', about); //关于
 // app.use('/add', add); //文章添加
