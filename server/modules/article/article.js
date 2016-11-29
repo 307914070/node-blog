@@ -1,10 +1,7 @@
-var express = require('express');
-var router = express.Router();
+var router = require('../../common/router');
 
 //数据库连接
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('localhost:27017/nodedb'); //本地数据库
+var db = require('../../common/db.js'); //本地数据库
 //var db = monk('mongodb://62121bb5-5e9f-4904-9efd-929c3f3e0f46:46Hd0gilnN14EOsj6GcGag@10.9.27.25:27017/6fc79c07-383f-4f1f-8f1c-923e5defa28d');//服务器
 
 //get article
@@ -21,7 +18,7 @@ router.post('/add', function(req, res, next) {
         param.count = 10;
         collection.insert(param, function(error, docs) {
             console.log('docs:', docs);
-            res.send({ msg: 'success', status: '0' });
+            res.send({ msg: 'success', status: docs });
         })
     });
 });
