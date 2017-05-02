@@ -67,16 +67,9 @@ function bindEvent() {
     $('#btnGetArticleList').bind('click', function () {
         addArticle();
     });
-
-    new Vue({
-        el: '#apps',
-        data: {
-            message: 'Hello Vue.js!'
-        }
-    });
 }
 
-$(function () {
-    //getArticle();//获取文章列表
-    bindEvent();
-});
+// $(function () {
+//     //getArticle();//获取文章列表
+//     bindEvent();
+// });

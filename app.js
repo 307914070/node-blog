@@ -20,7 +20,7 @@ var list = require('./server/modules/article/list'); //文章列表
 app.use(express.static('public')); //指定public目录
 
 var indexUrl = config.isTest ? config.testPage : config.indexPage;
-
+console.log('indexUrl:', {isTest: config.isTest, page: indexUrl});
 app.get('/', function(req, res) {
     res.sendfile(indexUrl);
 });

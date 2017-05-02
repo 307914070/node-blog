@@ -1,5 +1,5 @@
 var config = {
-    isTest: true,
+    isTest: false,
     indexPage: './views/index.html',
     testPage: './views/add.html'
 };
